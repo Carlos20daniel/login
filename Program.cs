@@ -1,22 +1,49 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
+using System.Data;
+using System.Data.SqlClient;
+using System.Linq.Expressions;
 using System.Windows.Forms;
+
 
 namespace login
 {
-    internal static class Program
+    class SQLcontrol
     {
-        /// <summary>
-        /// Punto de entrada principal para la aplicación.
-        /// </summary>
-        [STAThread]
-        static void Main()
+        private SqlConnection cnn = new SqlConnection(@"");
+
+        public int login(string usuario, string pass)
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            try
+            {
+                cnn.Open();
+
+                SqlCommand cmd = new SqlCommand("spLogin", cnn);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@usuaio", usuario);
+                cmd.Parameters.AddWithValue("@pass", pass);
+
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    return dr.GetInt32(0);
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+            finally
+            {
+                cnn.Close();
+            }
+            return -1;
+
         }
     }
 }

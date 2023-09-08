@@ -41,6 +41,9 @@ namespace login
                 frmMenu menu = new frmMenu();
                 this.Hide();
                 menu.ShowDialog();
+            }else if(result == 0)
+            {
+                MessageBox.Show("Usuario o contraseña incorrecta");
             }
         }
 

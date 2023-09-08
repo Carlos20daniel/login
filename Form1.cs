@@ -12,6 +12,7 @@ namespace login
 {
     public partial class Form1 : Form
     {
+        sqlcontrol Sqlcontrol = new sqlcontrol();
         public Form1()
         {
             InitializeComponent();
@@ -34,20 +35,15 @@ namespace login
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int result = SQLcontrol.Login(txtUsuario.Text, txtPass.Text);
-
-            if(result == 1)
-            {
-                frmMenu menu = new frmMenu();
-                this.Hide();
-                menu.ShowDialog();
-            }else if(result == 0)
-            {
-                MessageBox.Show("Usuario o contraseña incorrecta");
-            }
+            
         }
 
         private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }

@@ -34,7 +34,14 @@ namespace login
 
         private void button1_Click(object sender, EventArgs e)
         {
+            int result = SQLcontrol.Login(txtUsuario.Text, txtPass.Text);
 
+            if(result == 1)
+            {
+                frmMenu menu = new frmMenu();
+                this.Hide();
+                menu.ShowDialog();
+            }
         }
 
         private void txtUsuario_TextChanged(object sender, EventArgs e)

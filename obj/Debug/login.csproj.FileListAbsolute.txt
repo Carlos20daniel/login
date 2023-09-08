@@ -1,0 +1,12 @@
+C:\Users\Alumno\Desktop\login\bin\Debug\login.exe.config
+C:\Users\Alumno\Desktop\login\bin\Debug\login.exe
+C:\Users\Alumno\Desktop\login\bin\Debug\login.pdb
+C:\Users\Alumno\Desktop\login\obj\Debug\login.csproj.AssemblyReference.cache
+C:\Users\Alumno\Desktop\login\obj\Debug\login.csproj.SuggestedBindingRedirects.cache
+C:\Users\Alumno\Desktop\login\obj\Debug\login.Form1.resources
+C:\Users\Alumno\Desktop\login\obj\Debug\login.Properties.Resources.resources
+C:\Users\Alumno\Desktop\login\obj\Debug\login.usuario.resources
+C:\Users\Alumno\Desktop\login\obj\Debug\login.csproj.GenerateResource.cache
+C:\Users\Alumno\Desktop\login\obj\Debug\login.csproj.CoreCompileInputs.cache
+C:\Users\Alumno\Desktop\login\obj\Debug\login.exe
+C:\Users\Alumno\Desktop\login\obj\Debug\login.pdb
